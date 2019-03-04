@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack",
+    "start": "npm run start:server",
     "start:client": "webpack-dev-server --open",
     "start:server": "babel-node src/server/server",
     "start:dev": "concurrently \"npm run start:server\" \"npm run start:client\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:server": "babel-node src/server/server.test",
-    "init:db": "babel-node src/server/initDB"
+    "init:db": "babel-node src/server/initDB",
+    "build": "webpack -p"
   },
   "author": "",
   "license": "ISC",
