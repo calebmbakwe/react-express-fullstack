@@ -9,7 +9,7 @@ const TaskDetail = ({
   task,
   isComplete,
   groups,
-  setTaskCompetion,
+  setTaskCompletion,
   setTaskName,
   setTaskGroup
 }) => (
@@ -18,7 +18,7 @@ const TaskDetail = ({
       <input value={task.name} onChange={setTaskName} />
     </div>
     <div>
-      <button onClick={() => setTaskCompetion(id, !isComplete)}>
+      <button onClick={() => setTaskCompletion(id, !isComplete)}>
         {isComplete ? "Reopen" : "Complete"}
       </button>
     </div>
@@ -55,7 +55,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   const id = ownProps.match.params.id;
 
   return {
-    setTaskCompetion(id, isComplete) {
+    setTaskCompletion(id, isComplete) {
       dispatch(mutations.setTaskCompletion(id, isComplete));
     },
     setTaskGroup(e) {
